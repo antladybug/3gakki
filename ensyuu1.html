@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<title>【第1週】演習問題まとめ</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/iconSub.png">
+		<link rel = "stylesheet" href = "css/StyleSheet.css" />
+		<style>
+			.ToTop{ background: orangered; }
+			#wrapperToi { width: 85%; margin: 1em; padding: 0 .5em; }
+			#ToHome { border: solid 1px black; padding: .7em 1em; position: absolute; top: .5em; right: 1em; }
+			h1 { border-left: .3em solid olive; background-color: palegoldenrod; margin: 3em 0 1em .3em; font-size: 1.3em; padding: .3em 0; }
+			.balloon{ background-color: teal;}
+			.balloon::before{ border-left: 20px solid teal; border-top: 20px solid teal; }
+			a { text-decoration: none; }
+			a:link, a:visited, a:hover, a:active { color: black; }
+			.LinkAnserP { background-color: lightgreen; border: solid 1px black; padding: 1em 2em 1em 1em; width: 70%; margin: 1em 0 0 0; }
+			.LinkAnserP a:hover { opacity: 0.5; }
+			#ToHome a:hover { font-size: 1.2em; }
+			h2 { margin: 0; font-size: 1.2em; }
+			input#acd-check1, input#acd-check2, input#acd-check3, input#acd-check4, input#acd-check5, input#acd-check6, input#acd-check7, input#acd-check8, input#acd-check9, input#acd-check10 { display: none; }
+			input#acd-check2-1, input#acd-check2-2, input#acd-check2-3, input#acd-check2-4, input#acd-check2-5 { display: none; }
+			input#acd-check3-1, input#acd-check3-2, input#acd-check3-3, input#acd-check3-4, input#acd-check3-5, input#acd-check3-6, input#acd-check3-7, input#acd-check3-8, input#acd-check3-9, input#acd-check3-10 { display: none; }
+			.acd-label{ border-top:  .3em solid crimson; background: lemonchiffon; color: crimson; font-weight: bold; display: block; margin: .5em .3em; padding: .5em; }
+			.acd-content{ height: 0; visibility: hidden; }
+			.acd-check:checked + .acd-label + .acd-content{ border:  1px dashed crimson; height: 5em; margin: 0 3em; padding: 1em; visibility: visible; }
+			.mondaiImg1 { background: url( "img/ensyuu1.png" ); margin: .5em 0;width: 541px; height: 488px; }
+			.mondaiImg2 { background: url( "img/ensyuu1.png" ); margin: .5em 0;width: 317px; height: 113px; background-position: -631px 0px; }
+			.mondaiImg3 { background: url( "img/ensyuu1.png" ); margin: .5em 0;width: 331px; height: 155px; background-position: -951px 0px; }
+		</style>
+	</head>
+	<body id = "SubPage_top">
+		<div id = "ToHome"><a href = "index.html">ホーム画面へ</a></div>
+		<h1>【第1週】演習問題:システム監査</h1>
+		<div class="balloon">Let's 試験対策！P378～384</div>
+		<div id = "wrapperToi">
+			<h2>問1：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム監査人の役割に関する記述のうち、適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>監査対象から独立し、かつ、専門的な立場で、情報システムのコントロールの整備・運用に対する保証又は助言を行う。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>仕様書どおりの処理が行われるかどうか、テストを行い、リリースを承認する。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システムの性能を評価し、システムの利用者に監査調書を報告する。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>情報システムの総合テストで発見された不具合の改善を、テスト担当者に指示する。</div>
+			<input id="acd-check1" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check1">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=30" target = "_blank">平成26年秋期　問59へ</a></div>
+				</div>
+			</div>
+			<h2>問2：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			A社では、自然災害などの際の事業継続を目的として、業務システムのデータベースのバックアップを取得している。その状況について、"情報セキュリティ管理基準(平成28年)"に従って実施した監査結果として判明した状況のうち、監査人が指摘事項として監査報告書に記載すべきものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>バックアップ取得手順書を作成し、取得担当者を定めていた。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>バックアップを取得した電子記録媒体からデータベースを復旧する試験を、事前に定めたスケジュールに従って実施していた。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>バックアップを取得した電子記録媒体を、機密保持を含む契約を取り交わした外部の倉庫会社に委託保管していた。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>バックアップを取得した電子記録媒体を、業務システムが稼働しているサーバの近くで保管していた。</div>
+			<input id="acd-check2" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=6" target = "_blank">平成31年春期　問60へ</a></div>
+				</div>
+			</div>
+			<h2>問3：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			外部保管のために専門業者にバックアップ媒体を引き渡す際の安全性について、セキュリティ監査を実施した。その結果として判明した状況のうち、監査人が指摘事項として監査報告書に記載すべきものはどれか。		
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>委託元責任者が、一定期間ごとに、専門業者における媒体保管状況を確認する契約を結んだ上で引き渡している。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>委託元責任者が、専門業者との間で、機密保持条項を盛り込んだ業務委託契約を結んだ上で引き渡している。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>委託元担当者が、専用の記録簿に、引渡しの都度、日付と内容を記入し、専門業者から受領印をもらっている。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>委託元担当者が、バックアップ媒体を段ボール箱に入れ、それを専門業者に引き渡している。</div>
+			<input id="acd-check3" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=8" target = "_blank">平成30年秋期　問59へ</a></div>
+				</div>
+			</div>
+			<h2>問4：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム運用業務のオペレーション管理に関する監査で判明した状況のうち、指摘事項として監査報告書に記載すべきものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>運用責任者が、オペレータの作成したオペレーション記録を確認している。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>運用責任者が、期間を定めてオペレーション記録を保管している。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>オペレータが、オペレーション中に起きた例外処理を記録している。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>オペレータが、日次の運用計画を決定し、自ら承認している。</div>
+			<input id="acd-check4" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check4">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=12" target = "_blank">平成29年秋期　問58へ</a></div>
+				</div>
+			</div>
+			<h2>問5：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			ソースコードのバージョン管理システムが導入された場合に、システム監査において、ソースコードの機密性のチェックポイントとして追加することが適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>バージョン管理システムに登録したソースコードの変更結果を責任者が承認していること</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>バージョン管理システムのアクセスコントロールの設定が適切であること</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>バージョン管理システムの導入コストが適正な水準にあること</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>バージョン管理システムを開発部門が選定していること</div>
+			<input id="acd-check5" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check5">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=25" target = "_blank">平成27年秋期　問59へ</a></div>
+				</div>
+			</div>
+			<h2>問6：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			アクセス制御を監査するシステム監査人がとった行動のうち、適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>ソフトウェアに関するアクセス制御の管理表の作成と保管</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>データに関するアクセス制御の管理状況の確認</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>ネットワークに関するアクセス制御の管理方針の制定</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>ハードウェアに関するアクセス制御の運用管理の実施</div>
+			<input id="acd-check6" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check6">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=35" target = "_blank">平成28春期 問59へ</a></div>
+				</div>
+			</div>
+			<h2>問7：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			マスタファイル管理に関するシステム監査項目のうち、可用性に該当するものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>マスタファイルが置かれているサーバを二重化し、耐障害性の向上を図っていること</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>マスタファイルのデータを複数件まとめて検索・加工するための機能が、システムに盛り込まれていること</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>マスタファイルのメンテナンスは、特権アカウントを付与された者だけに許されていること</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>マスタファイルへのデータ入力チェック機能が、システムに盛り込まれていること</div>
+			<input id="acd-check7" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check7">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=44" target = "_blank">平成24年秋期　問60へ</a></div>
+				</div>
+			</div>
+			<h2>問8：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム監査規程の最終的な承認者はだれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>監査対象システムの利用部門の長</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>経営者</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システム部門の長</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>被監査部門の長</div>
+			<input id="acd-check8" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check8">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=55" target = "_blank">平成22年春期　問57へ</a></div>
+				</div>
+			</div>
+			<h2>問9：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			ある商店“システム管理基準”の説明はどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>コンピュータウイルスに対する予防、発見、駆除、復旧などについて実効性の高い対策をとりまとめたもの。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>コンピュータ不正アクセスによる被害の予防、発見、再発防止などについて、組織及び個人が実行すべき対策をとりまとめたもの。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報戦略を立案し、効果的な情報システム投資とリスクを低減するためのコントロールを適切に整備・運用するための事項をとりまとめたもの</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>ソフトウェアの違法複製を防止するため、法人、団体などを対象として、ソフトウェアを使用するに当たって実行されるべき事項をとりまとめたもの</div>
+			<input id="acd-check9" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check9">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ウ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=60" target = "_blank">平成21年春期　問59へ</a></div>
+				</div>
+			</div>
+			<h2>問10：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム監査におけるヒアリングを実施する際に、システム監査人の対処として、適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>ヒアリングの結果、調査対象の現状に問題があると判断した場合は、その調査対象のあるべき姿について被監査部門の専門的な相談に応じる。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>ヒアリングの結果、問題と思われる事項を発見した場合は、その裏付けとなる記録の入手や現場確認を行う。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>ヒアリングを行っている際に、被監査部門との間で見解の相違が生じた場合は、相手が納得するまで十分に議論を行う。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>被監査部門のヒアリング対象者が複数の場合は、職制上の上位者から集中的に話を聞く。</div>
+			<input id="acd-check10" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check10">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=52" target = "_blank">平成22年秋期　問58へ</a></div>
+				</div>
+			</div>
+		</div>
+		<h1>【第1週】演習問題:内部統制</h1>
+		<div class="balloon">Let's 試験対策！P378～384</div>
+		<div id = "wrapperToi">
+			<h2>問1：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム監査人の役割に関する記述のうち、適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>監査対象から独立し、かつ、専門的な立場で、情報システムのコントロールの整備・運用に対する保証又は助言を行う。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>仕様書どおりの処理が行われるかどうか、テストを行い、リリースを承認する。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システムの性能を評価し、システムの利用者に監査調書を報告する。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>情報システムの総合テストで発見された不具合の改善を、テスト担当者に指示する。</div>
+			<input id="acd-check2-1" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2-1">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=30" target = "_blank">平成30年秋期　問60へ</a></div>
+				</div>
+			</div>
+			<h2>問2：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			業務部門が起票した入力原票を、情報システム部門でデータ入力する場合、情報システム部門の業務として、適切なものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>業務部門が入力原票ごとの処理結果を確認できるように、処理結果リストを業務部門に送付している。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>入力原票の記入内容に誤りがある場合は、誤りの内容が明らかなときに限り、入力担当者だけの判断で入力原票を修正し、入力処理している。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>入力原票は処理期日まで情報システム部門で保管し、受領枚数の点検などの授受確認は、処理期日直前に一括して行うことにしている。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>入力済みの入力原票は、不正使用や機密情報の漏えいなどを防止するために、入力後直ちに廃棄することにしている。</div>
+			<input id="acd-check2-2" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2-2">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=2&no=2" target = "_blank">平成27年秋期　問57へ</a></div>
+				</div>
+			</div>
+			<h2>問3：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			IT統制を予防統制と発見統制に分類した場合、発見統制に該当するものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>データ入力画面を、操作ミスを起こしにくいように設計する。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>データ入力結果の出力リストと入力伝票とを照合する。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>データ入力担当者を限定し、アクセス権限を付与する。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>データ入力マニュアルを作成し、入力担当者に教育する。</div>
+			<input id="acd-check2-3" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2-3">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=2&no=3" target = "_blank">成23年秋期　問60へ</a></div>
+				</div>
+			</div>
+			<h2>問4：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			内部統制の観点から、組織内の相互牽(けん)制の仕組みで、データのインテグリティが確保できる体制はどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>業務ニーズにそった効率の良いデータ入力システムを実現するため、情報システム部門がデータ入力システムを開発してデータ入力する。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>情報システム部門の担当者は、その経験を生かし、システム開発においてデータの整合性が保てるように、長期間、同一部署に配置する。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システム部門の要員が他部門に異動する場合は、関連する資料をもたせ、システムトラブルなどの緊急時に戦力となるようにする。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>情報システム部門は、データを入力する利用部門からの独立を保ち、利用部門がデータの正確性を維持できるようにする。</div>
+			<input id="acd-check2-4" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2-4">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=2&no=4" target = "_blank">平成22年春期　問60へ</a></div>
+				</div>
+			</div>
+			<h2>問5：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			情報システムのセキュリティコントロールを予防、検知、復旧の三つに分けた場合、復旧に該当するものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>オペレータとプログラマの職務分離</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>コンティンジェンシープラン</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>パスワードの利用</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>メッセージ認証</div>
+			<input id="acd-check2-5" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check2-5">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=2&no=5" target = "_blank">平成21年秋期　問59へ</a></div>
+				</div>
+			</div>
+		</div>
+		<h1>【第1週】演習問題:システム戦略</h1>
+		<div class="balloon">Let's 試験対策！P394～405</div>
+		<div id = "wrapperToi">
+			<h2>問1：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em; color: red;">
+			※作問ミスのため、削除。
+			</div>
+			<h2>問2：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			投資案件において、5年間の投資効果をROI(Return On Investment)で評価した場合、四つの案件a～dのうち、最もROIが高いものはどれか。ここで、割引率は考慮しなくてもよいものとする。
+			</div>
+			<div class = "mondaiImg1"></div>
+			<div style = "margin-left: 4em;"><span>ア：</span>a</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>b</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>c</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>d</div>
+			<input id="acd-check3-2" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-2">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=3" target = "_blank">平成31年春期　問65へ</a></div>
+				</div>
+			</div>
+			<h2>問3：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			情報化に関する費用のうち、ランニングコストに該当するものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>サーバなど情報機器の保守費用</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>情報システム戦略立案のコンサルティング費用</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>ソフトウェアパッケージの導入費用</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>要件定義を行うシステムエンジニアの費用</div>
+			<input id="acd-check3-3" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-3">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ア</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=21" target = "_blank">平成24年秋期　問6へ</a></div>
+				</div>
+			</div>
+			<h2>問4：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			2種類のIT機器a、bの購入を検討している。それぞれの耐用年数を考慮して投資の回収期間を設定し、この投資で得られる利益の全額を投資額の回収に充てることにした。a、bそれぞれにおいて、設定した回収期間で投資額を回収するために最低限必要となる年間利益に関する記述のうち、適切なものはどれか。ここで、年間利益は毎年均等に上げられ、利率は考慮しないものとする。
+			</div>
+			<div class = "mondaiImg2"></div>
+			<div style = "margin-left: 4em;"><span>ア：</span>aとbは同額の年間利益を上げる必要がある。</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>aはbの2倍の年間利益を上げる必要がある。</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>bはaの1.5倍の年間利益を上げる必要がある。</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>bはaの2倍の年間利益を上げる必要がある。</div>
+			<input id="acd-check3-4" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-4">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=7" target = "_blank">平成28年秋期　問62へ</a></div>
+				</div>
+			</div>
+			<h2>問5：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			業務プロセスのモデリング表記法として用いられ、複数のモデル図法を体系化したものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>DFD</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>E-R図</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>UML</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>状態遷移図</div>
+			<input id="acd-check3-5" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-5">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">ウ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=25" target = "_blank">平成23年秋期　問63へ</a></div>
+				</div>
+			</div>
+			<h2>問6：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			エンタープライズアーキテクチャにおいて、テクノロジアーキテクチャで作成する成果物はどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>機能構成図(DMM)、機能情報関連図(DFD)</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>実体関連ダイアグラム(ERD)、データ定義表</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システム関連図、情報システム機能構成図</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>ネットワーク構成図、ソフトウェア構成図</div>
+			<input id="acd-check3-6" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-6">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=28" target = "_blank">平成22年秋期　問61へ</a></div>
+				</div>
+			</div>
+			<h2>問7：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			エンタープライズアーキテクチャを構成する四つの体系のうち、データ体系を策定する場合の成果物はどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>業務流れ図</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>実体関連ダイアグラム</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システム関連図</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>ソフトウェア構成図</div>
+			<input id="acd-check3-7" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-7">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=24" target = "_blank">平成23年秋期　問62へ</a></div>
+				</div>
+			</div>
+			<h2>問8：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			システム監査規程の最終的な承認者はだれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>監査対象システムの利用部門の長</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>経営者</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システム部門の長</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>被監査部門の長</div>
+			<input id="acd-check3-8" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-8">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=16&s=1&no=55" target = "_blank">平成22年春期　問57へ</a></div>
+				</div>
+			</div>
+			<h2>問9：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			エンタープライズアーキテクチャを構成するアプリケーションアーキテクチャについて説明したものはどれか。
+			</div>
+			<div style = "margin-left: 4em;"><span>ア：</span>業務に必要なデータの内容、データ間の関連や構造などを体系的に示したもの</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>業務プロセスを支援するシステムの機能や構成などを体系的に示したもの</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>情報システムの構築・運用に必要な技術的構成要素を体系的に示したもの</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>ビジネス戦略に必要な業務プロセスや情報の流れを体系的に示したもの</div>
+			<input id="acd-check3-9" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-9">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">エ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=12" target = "_blank">平成26年秋期　問61へ</a></div>
+				</div>
+			</div>
+			<h2>問10：</h2>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+			定性的な評価項目を定量化する方法としてスコアリングモデルがある。4段階評価のスコアリングモデルを用いると、表に示した項目から評価されるシステム全体の目標達成度は何％となるか。
+			</div>
+			<div class = "mondaiImg3"></div>
+			<div style = "margin-left: 4em;"><span>ア：</span>27</div>
+			<div style = "margin-left: 4em;"><span>イ：</span>36</div>
+			<div style = "margin-left: 4em;"><span>ウ：</span>43</div>
+			<div style = "margin-left: 4em;"><span>エ：</span>52</div>
+			<input id="acd-check3-10" class="acd-check" type="checkbox">
+			<label class="acd-label" for="acd-check3-10">回答をみる</label>
+			<div class="acd-content">
+				<div>
+					<div>正解は「<span style = "color: crimson; font-weight: bold;">イ</span>」です。</div>
+					<div>解説サイト：<a href = "https://www.fe-siken.com/bunya.php?m=17&s=1&no=34" target = "_blank">平成21年春期　問64へ</a></div>
+				</div>
+			</div>
+		</div>
+		<div class = "ToTop"><a href = "#SubPage_top"></a></div>
+	</body>
+</html>
