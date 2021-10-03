@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+::selection{ background-color: lime; }
 * { font-family: sans-serif; word-break: keep-all; overflow-wrap: break-word; margin: 0; padding: 0; }
 body { -webkit-text-size-adjust: 100%; }
 
@@ -34,12 +35,15 @@ body { -webkit-text-size-adjust: 100%; }
 .beforeGakkiIP { display: inline-block; position: absolute; left: 0; top: 10px; box-sizing: border-box; padding: 0 10px; margin: 0 .05em; height: 2em; line-height: 2em; font-size: small; color: white; background: mediumturquoise; box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.1); }
 .beforeGakkiIP:before { position: absolute; content: ''; top: -6px; left: -7px; border: none; height: 2.5em; width: 7px; background: mediumturquoise; border-radius: 5px 0 0 5px; }
 .beforeGakkiIP:after { position: absolute; content: ''; top: -6px; left: -5px; height: 7px; width: 5px; background: lightseagreen; border-radius: 5px 0 0 5px; }
-a { text-decoration: none; }
+a.IL { display: inline; }
+a { display: block; text-decoration: none; }
 a:link, a:visited, a:hover, a:active { color: black; }
+a:hover { opacity: .6; transform: translate( 0, -.3em ); transition: all 0.3s ease 0s;}
 .beforeGakki div a:hover { box-shadow: 0 15px 30px -5px rgba( 0, 0, 0, .15 ), 0 0 5px rgba( 0, 0, 0, .1 ); transform: translateY( -4px ); padding: .5em; }
 .contents div a:hover { box-shadow: 0 15px 30px -5px rgba( 0, 0, 0, .15 ), 0 0 5px rgba( 0, 0, 0, .1 ); transform: translateY( -4px ); padding: .5em; }
 .WaveRed { background: url( "../img/wave-red.png" ) bottom repeat-x; background-size: 1em; }
 .link { text-decoration: wavy underline crimson; margin: 0 .5em; text-underline-offset: .2em;  }
+.kaisetu { padding: .5em; background-color: gold; box-shadow: 1px 1px 2px; }
 
 /* 共通 */
 .CodeMaroon { color: maroon; }
@@ -52,7 +56,7 @@ a:link, a:visited, a:hover, a:active { color: black; }
 .balloon{ position: relative; padding: 1em; margin-top: .5em; background-color: teal; color: white; border-radius: 10px; width: 35%; left : 5em; }
 .balloon::before{ content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate( 45deg ); left: 20px; top: -15px; border-left: 20px solid teal; border-top: 20px solid teal; border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
 .balloon::after{ content: ''; position: absolute; display: block; width: 0; height: 0; border-radius: 50%; transform: rotate(45deg); left: 35px; top: -20px; border-left: 20px solid white; border-top: 20px solid white; border-right: 20px solid transparent; border-bottom: 20px solid transparent; }
-.LinkAnserP { background-color: lightgreen; border: solid 1px black; padding: .7em 1em; width: 70%; margin: 1em 0 0 2em; }
+.LinkAnserP { background-color: lightgreen; border: solid 1px black; padding: .7em 1em; width: 70%; margin: 1em 0 0 2em; box-shadow: 1px 1px 2px; }
 .LinkAnserP:hover { opacity: 0.5; }
 .hanten { padding: .7em 0; }
 .hanten::before { content: "反転学習"; background: pink; border: solid 3px violet; margin: .5em; padding: .5em; }
