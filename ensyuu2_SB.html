@@ -9,7 +9,8 @@
 		<style>
 			.ToTop{ background: orangered; }
 			#wrapperToi { width: 85%; margin: 1em; padding: 0 .5em; }
-			#ToHome { block: inline; color: white; background-color: darkred; border: solid 1px darkred; border-radius: .3em; padding: .7em 1em; position: absolute; top: .5em; right: 1em; }
+			#ToHome { color: white; background-color: darkred; border: solid 1px darkred; border-radius: .3em; padding: .7em 1em; }
+			.botton li { float: right; list-style: none; margin: .5em; }
 			h1 { border-left: .3em solid olive; background-color: palegoldenrod; margin: 3em 0 1em .3em; font-size: 1.3em; padding: .3em 0; }
 			.balloon{ background-color: teal;}
 			.balloon::before{ border-left: 20px solid teal; border-top: 20px solid teal; }
@@ -27,7 +28,10 @@
 			</style>
 	</head>
 	<body id = "SubPage_top">
-		<a href = "index.html"><div id = "ToHome">ホーム画面へ</div></a>
+		<ul class="botton">
+			<a href = "index.html"><li id = "ToHome">ホーム画面へ</li></a>
+			<a href = "ensyuu2.html"><li id = "ToHome" style = "background-color: navy!important;">戻る</li></a>
+		</ul>
 		<h1>【第2週】演習問題:システム戦略:ソリューションビジネス</h1>
 		<div class="balloon">Let's 試験対策！P406～409</div>
 		<div id = "wrapperToi">
