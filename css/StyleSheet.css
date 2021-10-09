@@ -44,6 +44,10 @@ a:hover { opacity: .6; transform: translate( 0, -.3em ); transition: all 0.3s ea
 .WaveRed { background: url( "../img/wave-red.png" ) bottom repeat-x; background-size: 1em; }
 .link { text-decoration: wavy underline crimson; margin: 0 .5em; text-underline-offset: .2em;  }
 .kaisetu { padding: .5em; background-color: gold; box-shadow: 1px 1px 2px; }
+#arrow::before { content: ""; width: 1.7em; height: 1.7em; background-color: navy; border-radius: 50%; display: inline-block; position: relative; left: 0; top: .5em; margin-right: .3em; }
+#arrow::after {  content: ""; display: block; width: .5em; height: .5em; border-top: .15em solid white; border-right: .15em solid white; transform: rotate( 45deg ); position: relative; left: .4em; top: -1.2em; }
+#arrow { font-weight: bold; color: navy; padding-left: .5em; margin: 1em 0 0 2em; width: 30em; border: .05em solid grey; border-radius: 5px; box-shadow: 0 .3em .5em .3em rgba( 0, 0, 0, .05 ) }
+a #arrow:hover { transform: translate( -.05em, 0 )!important; }
 
 /* 共通 */
 .CodeMaroon { color: maroon; }
