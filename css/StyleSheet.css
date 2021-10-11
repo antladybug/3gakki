@@ -51,9 +51,12 @@ a #arrow:hover { transform: translate( -.05em, 0 )!important; }
 #botton { display: inline-block; }
 
 /* 共通 */
+.MarkerYellow { background:linear-gradient(transparent 60%, yellow 60%); }
+.MarkerBlue { background:linear-gradient(transparent 75%, blue 75%); }
 .CodeMaroon { color: maroon; }
 .FontBold { font-weight: bold; }
 .MarginTB10 { margin-top: 1em; margin-bottom: 1em; }
+.MarginB05 { margin-bottom: .5em; }
 .MarginL10 { margin-left: 1em; }
 
 /* サブページ */
@@ -66,6 +69,9 @@ a #arrow:hover { transform: translate( -.05em, 0 )!important; }
 .hanten { padding: .7em 0; }
 .hanten::before { content: "反転学習"; background: pink; border: solid 3px violet; margin: .5em; padding: .5em; }
 .hanten ul li { list-style-type: none; padding: .5em 1em; margin: .5em; background: lavender; border-top: solid 2px gray; border-bottom: solid 1px gray; }
+.SQLCode { width: 97%;background-color: #003300; color: aliceblue; padding: .3em; margin: 1em 0; }
+.SQLCode:hover { color: coral; }
+.sentakusi { width: 2em; background-color: indigo; color: white; padding: .2em .5em; border-radius: .3em .3em 0 0; }
 
 @media screen and ( max-width: 600px ){
 	#week, #beforeGakki, .info { width: 87% !important; }
