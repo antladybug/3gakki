@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<title>【第4週】補てん学習:データベース操作</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/iconSub.png">
+		<link rel = "stylesheet" href = "css/StyleSheet.css" />
+		<style>
+			.ToTop{ background: orangered; }
+			#wrapperToi { width: 85%; margin: 1em; padding: 0 .5em; }
+			#ToHome { color: white; background-color: darkred; border: solid 1px darkred; border-radius: .3em; padding: .7em 1em; }
+			.botton li { float: right; list-style: none; margin: .5em .5em .5em 0; }
+			h1 { border-left: .3em solid olive; background-color: palegoldenrod; margin: 3em 0 1em .3em; font-size: 1.3em; padding: .3em 0; }
+			.balloon{ background-color: teal;}
+			.balloon::before{ border-left: 20px solid teal; border-top: 20px solid teal; }
+			a { text-decoration: none; }
+			a:link, a:visited, a:hover, a:active { color: black; }
+			.LinkAnserP { background-color: lightgreen; border: solid 1px black; padding: 1em 2em 1em 1em; width: 70%; margin: 1em 0 0 0; }
+			.LinkAnserP a:hover { opacity: 0.5; }
+			#ToHome a:hover { font-size: 1.2em; }
+			h2 { margin: 0; font-size: 1.2em; }
+			input#acd-check1, input#acd-check2, input#acd-check3, input#acd-check4, input#acd-check5, input#acd-check6, input#acd-check7, input#acd-check8, input#acd-check9, input#acd-check10 { display: none; }
+			.acd-label{ border-top:  .3em solid crimson; background: lemonchiffon; color: crimson; font-weight: bold; display: block; margin: .5em .3em; padding: .5em; }
+			.acd-content{ height: 0; visibility: hidden; }
+			.acd-check:checked + .acd-label + .acd-content{ border:  1px dashed crimson; height: 5em; margin: 0 3em; padding: 1em; visibility: visible; }
+			.mondaiImg1 { background: url( "img/ensyuu4.png" ); margin: .5em 0;width: 430px; height: 148px; }
+			.mondaiImg2 { background: url( "img/ensyuu4.png" ); margin: .5em 0;width: 454px; height: 402px; background-position: -431px 0; }
+			</style>
+	</head>
+	<body id = "SubPage_top">
+		<ul class="botton">
+			<a href = "index.html"><li id = "ToHome">ホーム画面へ</li></a>
+			<a href = "ensyuu4.html"><li id = "ToHome" style = "background-color: navy!important;">戻る</li></a>
+		</ul>
+		<div class = "blink" style = "margin-top: 7em;">sorry! Just a moment, please.</div>
+		<!--<h1>【第4週】補てん学習:データベース操作</h1>
+		<div class="balloon">Let's 試験対策！P179～185</div>
+		<div class = "MarginL10 MarginTB10">過去問を1問ずつ、SQL文を実行しながら習得しましょう。</div>
+		<h2>問1：</h2>
+		<div class = "MarginL10 MarginB05"><a href = "https://www.fe-siken.com/bunya.php?m=9&s=3&no=21" target = "_blank" class = "kaisetu">平成24年秋期　問31へ</a></div>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+				<div>関係データベース"注文"表の"顧客番号"は"顧客"表の主キー"顧客番号"に対応する外部キーである。</div>
+				<div>このとき、参照の整合性を損なうデータ操作はどれか。</div>
+				<div>ここで、ア～エの記述におけるデータの並びは、それぞれの表の列の並びと同順とする。</div>
+				<div class = "mondaiImg1"></div>
+				<div>注文表と顧客表の作成を行います。</div>
+				<div>2つの表の関係性を整理すると、注文表は『<span class = "MarkerBlue">参照する側のテーブル</span>』で
+				顧客表は『<span class = "MarkerYellow">参照される側のテーブル</span>』となります。</div>
+				<div class = "CodeMaroon FontBold MarginB05">※関係性のある表を作成するときは、参照する側される側の整理が必要！</div>
+				<div>まず、『<span class = "MarkerYellow">参照される側のテーブル</span>』である、顧客表から作成します。</div>
+				<div class = "SQLCode">
+					<div>create table 顧客( 顧客番号 varchar( 24 ), 顧客名 varchar( 24 ), primary key( 顧客番号 ) );</div>
+				</div>
+				<div>その次に『<span class = "MarkerBlue">参照する側のテーブル</span>』である、注文表を作成します。(外部キーの定義で事前に、顧客表の存在が必要)</div>
+				<div class = "SQLCode">
+					<div>create table 注文 ( 伝票番号 int, 顧客番号 varchar( 24 ), primary key( 伝票番号 ),foreign key( 顧客番号 ) references 顧客( 顧客番号 ) );</div>
+				</div>
+				<div>表の作成後、各表にレコードを4つずつ挿入(INSERT文)します。</div>
+				<div class = "SQLCode">
+					<div>insert into 顧客 values( "C005", "福島" );</div>
+					<div>insert into 顧客 values( "D010", "千葉" );</div>
+					<div>insert into 顧客 values( "K001", "長野" );</div>
+					<div>insert into 顧客 values( "L035", "宮崎" );</div>
+				</div>
+				<div class = "SQLCode">
+					<div>insert into 注文 values( 0001,"C005" );</div>
+					<div>insert into 注文 values( 0002,"K001" );</div>
+					<div>insert into 注文 values( 0003,"C005" );</div>
+					<div>insert into 注文 values( 0004,"D010" );</div>
+				</div>
+				<div>ここまでで、再現の準備は完了です。</div>
+				<div>次の選択肢ア～エまでのSQL文を実行して、参照整合性の確認をしましょう。</div>
+				<div class = "sentakusi FontBold">ア</div>
+				<div class = "SQLCode" style = "margin-top: 0!important; margin-bottom: 0;">
+					<div>delete from 顧客 where 顧客番号 = "L035";</div>
+				</div>
+				<div class = "MarginL10" style = "margin-bottom: 1em;">※削除したレコードを復元します。insert into 顧客 values( "L035", "宮崎" );</div>
+				
+				<div class = "sentakusi FontBold">イ</div>
+				<div class = "SQLCode" style = "margin-top: 0!important; margin-bottom: 0;">
+					<div>insert into 注文 values( 0005,"D010" );</div>
+				</div>
+				<div class = "MarginL10" style = "margin-bottom: 0;">※追加したレコードを整列で確認できます。select * from 注文 order by 伝票番号;</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 0;">[Let's try]ここで追加したレコードを削除してみよう！</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 1em;">　ヒント(?を埋めよう):delete from 注文 where <span style = "background-color: black; color: black;">伝票番号</span> = ?;</div>
+				
+				<div class = "sentakusi FontBold" style = "background-color: crimson;">ウ</div>
+				<div class = "SQLCode" style = "margin-top: 0!important; margin-bottom: 0;">
+					<div>insert into 注文 values( 0006,"F020" );</div>
+				</div>
+				<div class = "MarginL10" style = "margin-bottom: 1em;">※参照整合性のエラーで実行不可。</div>
+				
+				<div class = "sentakusi FontBold">エ</div>
+				<div class = "SQLCode" style = "margin-top: 0!important; margin-bottom: 0;">
+					<div>delete from 注文 where 伝票番号 = "0002";</div>
+				</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 0;">[Let's try]ここで追加したレコードを削除してみよう！</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 1em;">　ヒント(?を埋めよう):insert into <span style = "background-color: black; color: black;">注文</span> ?????;</div>
+			</div>
+		<h2>問2：</h2>
+		<div class = "MarginL10 MarginB05"><a href = "https://www.itpassportsiken.com/kakomon/22_aki/q87.html" target = "_blank" class = "kaisetu">平成22年秋期 問87へ</a></div>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+				<div class = "MarginB05">本問(☝の過去問参照)で利用される<span class = "link">3つのテーブル</span>を作成しましょう。</div>
+				<div>まず、『<span class = "MarkerYellow">参照される側のテーブル</span>』である、部署表と都道府県表を作成します。</div>
+				<div class = "SQLCode">
+					<div>CREATE TABLE 部署( 部署コード VARCHAR( 8 ),部署名 VARCHAR( 8 ),PRIMARY KEY( 部署コード ) );</div>
+				</div>
+				<div class = "SQLCode">
+					<div>CREATE TABLE 都道府県( 都道府県コード VARCHAR( 8 ), 都道府県名 VARCHAR( 8 ), PRIMARY KEY ( 都道府県コード ));</div>
+				</div>
+				<div>その次に『<span class = "MarkerBlue">参照する側のテーブル</span>』である、注文表を作成します。(外部キーの定義で事前に、顧客表の存在が必要)</div>
+				<div class = "SQLCode">
+					<div>CREATE TABLE 社員 (社員番号 VARCHAR( 8 ),社員名 VARCHAR ( 8 ),年齢 INT,部署コード VARCHAR( 8 ),都道府県コード VARCHAR ( 8 ),</div>
+					<div>PRIMARY KEY ( 社員番号 ),</div>
+					<div>FOREIGN KEY( 都道府県コード ) REFERENCES 都道府県( 都道府県コード ),</div>
+					<div>FOREIGN KEY( 部署コード ) REFERENCES 部署( 部署コード )</div>
+					<div>);</div>
+				</div>
+			</div>
+		<h2>問3：</h2>
+			<div class = "MarginL10 MarginB05"><a href = "https://www.fe-siken.com/bunya.php?m=9&s=3&no=10" target = "_blank" class = "kaisetu">平成28年秋期　問29へ</a></div>
+			<div style = "padding-left: 1em; padding-right: .5em;">
+				<div>"社員"表と"部門"表に対し，次のSQL文を実行したときの結果はどれか。</div>
+				<div class = "mondaiImg2"></div>
+				<div>部門表と社員表の作成を行います。</div>
+				<div>2つの表の関係性を整理すると、社員表は『<span class = "MarkerBlue">参照する側のテーブル</span>』で
+				部門表は『<span class = "MarkerYellow">参照される側のテーブル</span>』となります。</div>
+				<div class = "CodeMaroon FontBold MarginB05">※関係性のある表を作成するときは、参照する側される側の整理が必要！</div>
+				<div>まず、『<span class = "MarkerYellow">参照される側のテーブル</span>』である、部門表から作成します。</div>
+				<div class = "SQLCode">
+					<div>create table 部門( 部門名 varchar(8), フロア int, primary key( 部門名 ) );</div>
+				</div>
+				<div>その次に『<span class = "MarkerBlue">参照する側のテーブル</span>』である、社員表を作成します。(外部キーの定義で事前に、部門表の存在が必要)</div>
+				<div class = "SQLCode">
+					<div>create table 社員( 社員番号 int, 所属 varchar(8), primary key( 社員番号 ),foreign key ( 所属 ) references 部門( 部門名 ) );</div>
+				</div>
+				<div>表の作成後、各表にレコードを4つずつ挿入(INSERT文)します。</div>
+				<div class = "SQLCode">
+					<div>insert into 部門 value( "企画", 1 );</div>
+					<div>insert into 部門 value( "総務", 1 );</div>
+					<div>insert into 部門 value( "情報システム", 2 );</div>
+					<div>insert into 部門 value( "営業", 3 );</div>
+					<div>insert into 部門 value( "経理", 2 );</div>
+					<div>insert into 部門 value( "法務", 2 );</div>
+					<div>insert into 部門 value( "購買", 2 );</div>
+				</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 0;">[Let's try]ここで追加したレコードを選択で抽出してみよう！</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 1em;">　ヒント(?を埋めよう):select <span style = "background-color: black; color: black;">* from 部門</span> order by フロア;</div>
+				<div class = "SQLCode">
+					<div>insert into 社員 value( 11001, "総務" );</div>
+					<div>insert into 社員 value( 11002, "経理" );</div>
+					<div>insert into 社員 value( 11003, "営業" );</div>
+					<div>insert into 社員 value( 11004, "営業" );</div>
+					<div>insert into 社員 value( 11005, "情報システム" );</div>
+					<div>insert into 社員 value( 11006, "営業" );</div>
+					<div>insert into 社員 value( 11007, "企画" );</div>
+					<div>insert into 社員 value( 12001, "営業" );</div>
+					<div>insert into 社員 value( 12002, "情報システム" );</div>
+				</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 0;">[Let's try]ここで追加したレコードを選択で抽出してみよう！</div>
+				<div class = "MarginL10 CodeMaroon" style = "margin-bottom: 1em;">　ヒント(?を埋めよう):select <span style = "background-color: black; color: black;">* from 社員</span> order by 社員番号;</div>
+				<div>ここまでで、再現の準備は完了です。</div>
+				<div>問題のSQL文を実行して、動作確認をしましょう。</div>
+				<div class = "sentakusi FontBold" style = "background-color: crimson; width: 3em;">SQL</div>
+				<div class = "SQLCode" style = "margin-top: 0!important; margin-bottom: 2em;">
+					<div>select count( * ) from 社員, 部門 where 社員.所属 = 部門.部門名 and 部門.フロア = 2;</div>
+				</div>
+			</div>
+		<div class = "ToTop"><a href = "#SubPage_top"></a></div>-->
+	</body>
+</html>
